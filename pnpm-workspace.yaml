@@ -1,0 +1,4 @@
+packages:
+  - play
+  - packages/*
+  - internal/*

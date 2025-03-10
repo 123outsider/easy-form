@@ -1,0 +1,39 @@
+{
+  "name": "easy-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --cache",
+    "cz": "czg",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "element-plus": "^2.5.0",
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@easy-form/build-utils": "workspace:*",
+    "@easy-form/eslint-config": "workspace:*",
+    "@easy-form/utils": "workspace:*",
+    "@types/node": "^22.13.9",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "czg": "^1.11.1",
+    "husky": "^9.1.7",
+    "jiti": "^2.4.2",
+    "lint-staged": "^15.4.3",
+    "prettier": "3.5.3"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
+  }
+}
