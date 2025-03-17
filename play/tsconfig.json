@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "Node16",
+    "target": "ESNext",
+    "strictNullChecks": true,
+    "paths": {
+      "@easy-form/*": ["../packages/*"],
+      "easy-form": ["../packages/components"]
+    }
+  }
+}

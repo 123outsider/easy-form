@@ -29,6 +29,8 @@ export default [
     languageOptions: { parserOptions: { parser: tseslint.parser } },
     rules: {
       'vue/multi-word-component-names': ['error', { ignores: ['app.example'] }],
+      'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+      'vue/require-default-prop': 'off',
     },
   },
   {
