@@ -1,5 +1,10 @@
 <template>
-  <el-form :model="data">
+  <el-form
+    ref="form"
+    :rules="rules"
+    :model="data"
+    :validate-on-rule-change="false"
+  >
     <slot></slot>
     {{ data }}
   </el-form>
@@ -9,8 +14,8 @@
 import { ElForm } from 'element-plus'
 import { useFormRoot } from './use-form-root'
 import { FormRootKey } from './form-root'
-import { provide } from 'vue'
-
-const { data, setItem, getItem } = useFormRoot()
-provide(FormRootKey, { data, setItem, getItem })
+import { provide, ref } from 'vue'
+const form = ref<InstanceType<typeof ElForm>>()
+const { data, rules, getRules, setRule, setItem, getItem } = useFormRoot()
+provide(FormRootKey, { data, rules, setItem, getItem, getRules, setRule })
 </script>
